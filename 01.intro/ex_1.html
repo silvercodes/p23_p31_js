@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background: chocolate;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .output {
+            background: #f4f44e;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Example 1</h1>
+
+    <div>
+        <button>Show alert</button>
+        <button>Calculate</button>
+        <button>Add comment</button>
+    </div>
+
+    <div class="output" id="output">
+
+    </div>
+
+    <script>
+        'use strict';
+
+        function displayOutput(text) {
+            const outputElement = document.getElementById('output');
+            outputElement.innerHTML = `<p style="font-size:24px;">${text}</p>`;
+        }
+
+        displayOutput('Hello from SCRIPT');
+
+
+
+
+
+    </script>
+
+</body>
+</html>
