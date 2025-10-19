@@ -34,9 +34,9 @@
     <h1>Example 1</h1>
 
     <div>
-        <button>Show alert</button>
-        <button>Calculate</button>
-        <button>Add comment</button>
+        <button onclick="showAlert()">Show alert</button>
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="addComment()">Add comment</button>
     </div>
 
     <div class="output" id="output">
@@ -51,11 +51,27 @@
             outputElement.innerHTML = `<p style="font-size:24px;">${text}</p>`;
         }
 
+        function showAlert() {
+            alert('This is modal window');
+            displayOutput('Alert was displayed');
+        }
+
+        function calculate() {
+            let a = 10;
+            let b = 5;
+
+            let sum = a + b;
+            let prod = a * b;
+
+            displayOutput(`Sum: ${a} + ${b} = ${sum}`);
+            displayOutput(`Prod: ${a} * ${b} = ${prod}`);
+        }
+
+        function addComment() {
+            displayOutput('// This is comment');
+        }
+
         displayOutput('Hello from SCRIPT');
-
-
-
-
 
     </script>
 

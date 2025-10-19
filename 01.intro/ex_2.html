@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator</title>
+</head>
+<body>
+    
+    <script>
+        let birthYear = prompt('Enter your birth year');
+
+        if (! isNaN(birthYear)) {
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - parseInt(birthYear);
+
+            alert(`Age: ${age}`);
+        } else {
+            alert('Input is invalid');
+        }
+    </script>
+</body>
+</html>

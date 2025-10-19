@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types</title>
+</head>
+<body>
+    
+    <script>
+        // ----- Number -----
+
+        // const integer = 23;
+        // const float = 3.235235;
+        // const sci = 2.998e8;            // 2.998 * 10^8
+        // const hex = 0xFF;       // 255
+        // const bin = 0b101;      // 5
+        // const oct = 0o766;      // 502
+
+        // const inf = Infinity;
+        // const mInf = -Infinity;
+        // const notANumber = NaN;
+
+        // console.dir(Number);
+        // console.log(Number.MAX_SAFE_INTEGER);
+
+        // let num = 123.456;
+
+        // console.log('🟢', num.toFixed(2));
+        // console.log('🟢', num.toPrecision(5));
+
+
+
+        // ----- BigInt ------
+
+        // const a = 8734658601258374659736485927349647569238479834587264359872394626n;
+        // const b = BigInt('8734658601258374659736485927349647569238479834587264359872394626');
+
+        // const c = 2n ** 60n;
+
+        // const d = BigInt(Number.MAX_SAFE_INTEGER) + 1n;
+
+
+
+        // ---- string -----
+
+        // const a = "name: 'Vasia'";
+        // const b = 'name: "Vasia"';
+        // const c = `name: ${a}`;
+
+        // const d = "vasia\nkolia\ndima";
+        // console.log('🟢', d);
+        // const e = "\u{1F600}";
+        // console.log('🟢', e);
+
+        // const str = 'Hello Vasia';
+        // console.log('🟢', str.length);
+        // console.log('🟢', str.toUpperCase());
+        // console.log('🟢', str.toLowerCase());
+        // console.log('🟢', str.substring(0, 5));
+        // console.log('🟢', str.replace('Vasia', 'Kolya'));
+
+        // console.log('🟢', str.indexOf('Kolya'));
+        // console.log('🟢', str.includes('Kolya'));
+        // console.log('🟢', str.startsWith('Hello'));
+
+        // console.log('🟢', str.trim());
+
+
+
+        // ----- boolean -----
+
+        const a = true;
+
+        console.log('🟢', Boolean(1));          // true
+        console.log('🟢', Boolean(0));          // false
+        console.log('🟢', Boolean('hello'));    // true
+        console.log('🟢', Boolean(''));         // false
+        console.log('🟢', Boolean({}));         // true
+        console.log('🟢', Boolean(null));       // false
+        console.log('🟢', Boolean(undefined));  // false
+        console.log('🟢', Boolean(NaN));        // false
+
+
+        console.log('🟢', 5 == '5');            // true
+        console.log('🟢', 5 === '5');           // false
+
+        // [false, 0, '', null, undefined, NaN]  ===> false
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
