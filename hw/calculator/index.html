@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="firstVal" placeholder="Enter the first number">
+
+    <button id="btnGet">GET</button>
+
+
+    <script>
+        
+        function handleClick() {
+            const a = document.querySelector('div > .firstVal');
+
+            const firstInput = document.getElementById('firstVal');
+            console.dir(firstInput);
+
+            const val1 = Number(firstInput.value);
+
+            console.log('🟢', val1);
+        }
+
+        const btn = document.getElementById('btnGet');
+        btn.addEventListener('click', handleClick);
+
+    </script>
+</body>
+</html>
