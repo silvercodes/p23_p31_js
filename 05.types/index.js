@@ -393,19 +393,19 @@
 
 //#region Map / Set / WeakMap / WeakSet
 
-const map = new Map();
+// const map = new Map();
 
-map.set('101', 'vasia');
-map.set(101, 'petya');
-map.set(false, 'dima');
+// map.set('101', 'vasia');
+// map.set(101, 'petya');
+// map.set(false, 'dima');
 
-console.log('🟢', map);
-console.log('🟢', map.get(101));
-console.log('🟢', map.size);
+// console.log('🟢', map);
+// console.log('🟢', map.get(101));
+// console.log('🟢', map.size);
 
-map[1] = 123;
-console.log('🟢', map[1]);
-console.log('🟢', map);
+// map[1] = 123;
+// console.log('🟢', map[1]);
+// console.log('🟢', map);
 
 
 
@@ -440,20 +440,20 @@ console.log('🟢', map);
 //     ['dima', 300],
 // ]);
 
-// // console.log('🟢', map.keys());
+// console.log('🟢', map.keys());
 
-// // for(let key of map.keys())
-// //     console.log('🟢', key);
+// for(let key of map.keys())
+//     console.log('🟢', key);
 
-// // for(let val of map.values())
-// //     console.log('🟢', val);
+// for(let val of map.values())
+//     console.log('🟢', val);
 
-// // for(let val of map)
-// //     console.log('🟢', val);
+// for(let val of map)
+//     console.log('🟢', val);
 
 // map.forEach((item, k, m) => {
 //     console.log('🟢', item);
-// })
+// });
 
 
 // ===== object --> Map
@@ -535,3 +535,190 @@ console.log('🟢', map);
 // item = null;
 
 // console.log('🟢', weakSet.has(item));
+
+//#endregion
+
+
+//#region JSON
+
+// const unit = {
+//     id: 101,
+//     title: 'vasia',
+//     hp: 50,
+//     position: {
+//         x: 10,
+//         y: 20,
+//     },
+//     weapon: [
+//         'sward',
+//         'bow'
+//     ]
+// };
+
+// const user = {
+//     id: 101, 
+//     email: 'vasia@mail.com',
+//     age: 23,
+//     role: 'admin'
+// };
+
+// console.log('🟢', JSON.stringify(user));
+// console.log('🟢', JSON.stringify(unit));
+
+// const json = JSON.stringify(unit);
+// console.log('🟢', json);
+// const obj = JSON.parse(json);
+// console.log('🟢', obj);
+
+
+// console.log('🟢', JSON.stringify(user, (k, v) => {
+//     return k === 'role' ? undefined : v;
+// }));
+
+// console.log('🟢', JSON.stringify(user, null, 4));
+
+
+// const data = '{"id": 101, "title": "vasia", "date": "2025-04-26T15:26:12"}';
+
+// const obj = JSON.parse(data);
+// console.log('🟢', obj);
+
+// const obj = JSON.parse(data, (k, v) => {
+//     if (k === 'date')
+//         return new Date(v);
+
+//     return v;
+// });
+
+// console.log('🟢', obj);
+
+//#endregion
+
+
+//#region Destruction array / object
+
+// --- array
+
+// const data = [101, 'vasia@mail.com', 23];
+// const email = data[1];
+
+// const [id, email, age] = data;
+// console.log('🟢', id, email, age);
+
+// const [id, , age] = data;
+
+// const [a, b, c] = 'vasia';
+// console.log('🟢', a, b, c);
+
+
+// const user = {};
+// const data = [101, 'vasia@mail.com', 23];
+// [user.id, user.email] = data;
+// console.log('🟢', user);
+
+
+// const user = {
+//     id: 101,
+//     email: 'vasia@mail.com',
+// };
+
+// for (let [k, v] of Object.entries(user))
+//     console.log('🟢', k, v);
+
+
+// const planets = ['Mercury', 'Venus', 'Earth', 'Mars'];
+// const [p1, p2, ...other] = planets;
+// console.log('🟢', p1, p2, other);
+
+
+// const [a = 7, b = 9] = [101];
+// console.log('🟢', a, b);
+
+
+// :-)))
+// let a = 12;
+// let b = 24;
+// [b, a] = [a, b];
+// console.log('🟢', a, b);
+
+
+
+
+// ----- object
+
+// const user = {
+//     id: 101,
+//     email: 'vasia@mail.com',
+//     age: 23
+// };
+
+// const {id, email} = user;
+// const {age} = user;
+// console.log('🟢', id, email, age);
+
+
+// const {email: emailAddress} = user;
+// console.log('🟢', emailAddress);
+
+// const {role = 'guest'} = user;
+// console.log('🟢', role);
+
+// const {
+//     email: emailAddress = 'no_email',
+//     role: userRole = 'guest'
+// } = user;
+
+// console.log('🟢', emailAddress, userRole);
+
+// const {email: emailAddress = 'no_email', ...other} = user;
+// console.log('🟢', emailAddress, other);
+
+
+// const unit = {
+//     id: 101,
+//     title: 'vasia',
+//     hp: 50,
+//     position: {
+//         x: 10,
+//         y: 20,
+//     },
+//     weapon: [
+//         'sward',
+//         'bow'
+//     ]
+// };
+
+// const {
+//     title: name = 'no_name',
+//     position: {
+//         x: xCoord = 0
+//     },
+//     weapon: [
+//         priorityWeapon = 'no_weapon'
+//     ],
+//     ...other
+// } = unit;
+
+// console.log('🟢', name, xCoord, priorityWeapon, other);
+
+
+
+
+// function processing({
+//     path: p = '/var/logs',
+//     level: l = 'wrong'
+// } = {}) {
+//     console.log('🟢', p, l);
+// }
+
+// processing({
+//     driver: 'file',
+//     path: '/bin/debug',
+//     color: 'white'
+// });
+
+// processing({});
+
+// processing();
+
+//#endregion
